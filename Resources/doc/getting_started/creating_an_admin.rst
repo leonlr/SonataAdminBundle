@@ -185,6 +185,8 @@ service and tag it with the ``sonata.admin`` tag:
             arguments: [~, AppBundle\Entity\Category, ~]
             tags:
                 - { name: sonata.admin, manager_type: orm, label: Category }
+            public: true
+            autowire: false
 
 The constructor of the base Admin class has many arguments. SonataAdminBundle
 provides a compiler pass which takes care of configuring it correctly for you.
